@@ -49,20 +49,25 @@
 
 Для начала пройдёся по ***панели устройств*** в cisco packet tracer. Посмотрим из чего может состоять сеть.
 
-<img width="162" height="91" alt="image" src="https://github.com/user-attachments/assets/a7ca9f67-61af-45a7-99b7-4a47040cb1f0" />  Рис.1
+<details>
+  <summary>Рис.1</summary>
+  <br>
 
-На рис.1 изображены ***конечные*** и ***промежуточные устройства***, а также ***линии связи*** (сетевые среды/среда передачи данных).
+  <img width="162" height="91" alt="image" src="https://github.com/user-attachments/assets/a7ca9f67-61af-45a7-99b7-4a47040cb1f0" />
 
-<img width="491" height="91" alt="image" src="https://github.com/user-attachments/assets/48ff5b6f-ed20-43af-b891-fbb202a966fa" />  Рис.2
-
-На рис.2 в верхнем левом углу изображён значок молнии - ***среда передача данных*** или кабеля (более простым языком). 
+  На рис.1 изображены ***конечные*** и ***промежуточные устройства***, а также ***линии связи*** (сетевые среды/среда передачи данных).
+</details>
 
 <details>
-  <summary></summary>
+  <summary>Рис.2</summary>
   <br>
-  
-  > В практических работах будем использовать прямой кабель (чёрный провод) и кроссовер (рядом с чёрным провод, выглядит, как пунктир).
+
+  <img width="491" height="91" alt="image" src="https://github.com/user-attachments/assets/48ff5b6f-ed20-43af-b891-fbb202a966fa" />
+
+  На рис.2 в верхнем левом углу изображён значок молнии - ***среда передача данных*** или кабеля (более простым языком). 
 </details>
+
+> В практических работах будем использовать прямой кабель (чёрный провод) и кроссовер (рядом с чёрным провод, выглядит, как пунктир).
 
 <details>
   <summary>Прямой</summary>
@@ -86,9 +91,14 @@
 
 ## <a id="title1">Конечные устройства</a>
 
-<img width="612" height="83" alt="image" src="https://github.com/user-attachments/assets/65ff05b1-8224-4b0c-b0a9-05a1b778b142" />  Рис.3
+<details>
+  <summary>Рис.3</summary>
+  <br>
 
-На рис.3 в верхнем нижним углу конечные устройства.
+  <img width="612" height="83" alt="image" src="https://github.com/user-attachments/assets/65ff05b1-8224-4b0c-b0a9-05a1b778b142" />
+
+  На рис.3 в верхнем нижним углу конечные устройства.
+</details>
 
 <details>
   <summary>Конечные устройства</summary>
@@ -112,13 +122,32 @@
 
 ## <a id="title2">Промежуточные устройства</a>
 
-<img width="275" height="50" alt="image" src="https://github.com/user-attachments/assets/1fbe8af8-aefc-492f-85a6-44c487bd619b" />  Рис.4
+<details>
+  <summary>Рис.4</summary>
+  <br>
 
-<img width="460" height="57" alt="image" src="https://github.com/user-attachments/assets/7b51bc4d-9c3a-4906-85be-08ccb68f39f8" />  Рис.5
+  <img width="275" height="50" alt="image" src="https://github.com/user-attachments/assets/1fbe8af8-aefc-492f-85a6-44c487bd619b" />
 
-<img width="613" height="63" alt="image" src="https://github.com/user-attachments/assets/d0130078-9257-4b20-b3bb-d5d973d65cf1" />  Рис.5
+  На рис.4 изображены хабы.
+</details>
 
-На рис.4, 5, 6 изображены: 1 - хабы, 2 - коммутаторы, 3 - маршрутизаторы (по-английски роутер).
+<details>
+  <summary>Рис.5</summary>
+  <br>
+
+  <img width="460" height="57" alt="image" src="https://github.com/user-attachments/assets/7b51bc4d-9c3a-4906-85be-08ccb68f39f8" />
+
+  На рис.5 изображены коммутаторы.
+</details>
+
+<details>
+  <summary>Рис.6</summary>
+  <br>
+  
+  <img width="613" height="63" alt="image" src="https://github.com/user-attachments/assets/d0130078-9257-4b20-b3bb-d5d973d65cf1" />
+
+  На рис.6 изображены маршрутизаторы (по-английски роутер).
+</details>
 
 <details>
   <summary>Промежуточные устройства</summary>
