@@ -252,92 +252,155 @@
 
 ## <a id="title1">ICMP симуляция</a>
 
-1. Построить схему сети
+1. Построить сеть
 
-<img width="683" height="376" alt="image" src="https://github.com/user-attachments/assets/cf60245b-9f3a-48f8-b4ed-8f13c2459bae" />
+<details>
+  <summary>Схема</summary>
+  <br>
+
+  <img width="683" height="376" alt="image" src="https://github.com/user-attachments/assets/cf60245b-9f3a-48f8-b4ed-8f13c2459bae" />
+</details>
 
 > Чтобы прописать IP-адреса и префиксы, нажмите на ***Place Note*** (справа есть панель, выберите второй, считая сверху)
 
 2. Пропишем IP-configuration и названия конечных устройств.
 
-<img width="299" height="242" alt="image" src="https://github.com/user-attachments/assets/b39ad07e-428b-46c8-8f18-bb1a86de4710" />
-</br>
-<img width="305" height="244" alt="image" src="https://github.com/user-attachments/assets/2502c4d9-0d4f-420e-8103-fa9014e2ed1e" />
-</br>
-<img width="307" height="243" alt="image" src="https://github.com/user-attachments/assets/80cf1f5a-9a3a-427c-b758-a9eabd3784d9" />
-</br>
-<img width="305" height="253" alt="image" src="https://github.com/user-attachments/assets/a643d405-e6ee-4823-a267-67541865561e" />
-</br>
-<img width="275" height="289" alt="image" src="https://github.com/user-attachments/assets/c038fde5-000a-41e3-9646-fd7a39d1226c" />
+<details>
+  <summary>comp1</summary>
+  <br>
 
-Но прежде, чем приступать разберёмся ICMP по подробнее.
+  <img width="299" height="242" alt="image" src="https://github.com/user-attachments/assets/b39ad07e-428b-46c8-8f18-bb1a86de4710" />
+</details>
 
-**ICMP** - протокол для проверки сети и доступности устройств. Состоит из:
-+ ICMP Echo Request (эхо запрос)
-+ ICMP Echo Reply (эхо ответ)
-* ICMP инкапсулируется в IP-пакеты, так как пакеты передаются по сети.
+<details>
+  <summary>comp2</summary>
+  <br>
 
-Структура ICMP:
+  <img width="305" height="244" alt="image" src="https://github.com/user-attachments/assets/2502c4d9-0d4f-420e-8103-fa9014e2ed1e" />
+</details>
 
-> 1. Заголовок:
-   > * Тип сообщения (Type): 0 для ответа, 8 для запроса.
-   > * Код (Code): более подробная информация о типе сообщения (у типа 0 и 8 только код 0, который означает эхо-запрос и эхо-ответ).
-   > * Контрольная сумма (Checksum): контрольная сумма для проверки целостности сообщения.
-   > * Идентификатор (ID). Если делается пинг, то посылается, как правило 4 эхо-запроса, id каждого не меняется.
-   > * Порядковый номер (Sequence Number). Если делается пинг, то посылается, как правило 4 эхо-запроса, порядковый номер каждого меняется.
-> 2. Поле данных.
-> Данные отправителя. Оно может быть пустым или включать случайные данные, что помогает проверить, вернулись ли эти же данные обратно.
+<details>
+  <summary>comp3</summary>
+  <br>
 
-Пример:
+  <img width="307" height="243" alt="image" src="https://github.com/user-attachments/assets/80cf1f5a-9a3a-427c-b758-a9eabd3784d9" />
+</details>
 
-<img width="365" height="90" alt="image" src="https://github.com/user-attachments/assets/e83d3e84-00f5-41cc-9ff5-474406c407bd" />
+<details>
+  <summary>comp4</summary>
+  <br>
 
-> С более подробной информацией о ICMP, структуре и форматах сможете ознакомится здесь: https://net.academy.lv/lection/net_LS-10RU_icmp.pdf. Для практической работы достаточно.
+  <img width="305" height="253" alt="image" src="https://github.com/user-attachments/assets/a643d405-e6ee-4823-a267-67541865561e" />
+</details>
+
+<details>
+  <summary>server1</summary>
+  <br>
+
+  <img width="275" height="289" alt="image" src="https://github.com/user-attachments/assets/c038fde5-000a-41e3-9646-fd7a39d1226c" />
+</details>
+
+<details>
+  <summary>ICMP</summary>
+  <br>
+
+  Протокол для проверки сети и доступности устройств. Состоит из:
+  <ul>
+    <li>ICMP Echo Request (эхо запрос)</li>
+    <li>ICMP Echo Reply (эхо ответ)</li>
+  </ul>
+
+  ICMP инкапсулируется в IP-пакеты, так как пакеты передаются по сети.
+</details>
+
+<details>
+  <summary>Структура ICMP</summary>
+  <br>
+
+  <ol>
+    <li>Заголовок:</li>
+    <ul>
+      <li><b>Тип сообщения</b> - 0 для ответа, 8 для запроса</li>
+      <li><b>Код</b> - информация о типе сообщения (у типа 0 и 8 только код 0, который означает эхо-запрос и эхо-ответ)</li>
+      <li><b>Контрольная сумма</b> - контрольная сумма для проверки целостности сообщения</li>
+      <li><b>Идентификатор</b>. Если делается пинг, то посылается, как правило 4 эхо-запроса, id каждого не меняется</li>
+      <li><b>Порядковый номер</b>. Если делается пинг, то посылается, как правило 4 эхо-запроса, порядковый номер каждого меняется</li>
+    </ul>
+    <li>Поле данных</li>
+    <ul>
+      <li>Данные отправителя. Оно может быть пустым или включать случайные данные, что помогает проверить, вернулись ли эти же данные обратно</li>
+    </ul>
+  </ol>
+
+  Пример:
+
+  <img width="365" height="90" alt="image" src="https://github.com/user-attachments/assets/e83d3e84-00f5-41cc-9ff5-474406c407bd" />
+</details>
 
 3. Пропингуем comp1 и сервер в симуляции и посмотрим, что происходит.
 
-> Где написано Realtime, за ним находится режим Simulation (нажмите на него)
+<details>
+  <summary>Порядок действий в приложении</summary>
+  <br>
 
-> Нажмите на Edit Filters, уберите во всех вкладках галочки, кроме ICMP, ARP.
+  1. Где написано Realtime, за ним находится режим Simulation (нажмите на него).
+  
+  2. Нажмите на Edit Filters, уберите во всех вкладках галочки, кроме ICMP, ARP.
+  
+  3. Нажимаем на comp1 -> Desktop -> Command Prompt -> прописываем команду ping 192.168.1.5 -> Enter -> Esc.
+</details>
 
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/f989caa6-9c1f-4303-b0e6-022f9c4757cb" />
+4. Результат:
 
-> Формируется ICMP эхо-запрос, но перед ним отправят ARP-запрос, чтобы узнать MAC-адрес получателя.
+<details>
+  <summary>Симуляция ARP</summary>
+  <br>
 
-> На следующих скриншотах показан путь ARP.
+  > Формируется ICMP эхо-запрос, но перед ним отправят ARP-запрос, чтобы узнать MAC-адрес получателя.
+  
+  > На следующих скриншотах показан путь ARP.
 
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/5d7922bd-8a9e-464c-9e78-9a743f90c666" />
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/f989caa6-9c1f-4303-b0e6-022f9c4757cb" />
 
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/1ee4b2ee-7a7f-4fa4-a1c1-607893072a90" />
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/5d7922bd-8a9e-464c-9e78-9a743f90c666" />
 
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/c9a1a2a7-c3ec-46c8-adbe-36593e270109" />
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/1ee4b2ee-7a7f-4fa4-a1c1-607893072a90" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/c9a1a2a7-c3ec-46c8-adbe-36593e270109" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/dbc52482-dc55-4340-8cb5-4f4630665d57" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/7b3240cf-5f8e-46f8-8128-60c975da8114" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/1b85bfa8-6757-4de2-a7eb-b106d73a044e" />
+</details>
 
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/dbc52482-dc55-4340-8cb5-4f4630665d57" />
+<details>
+  <summary>Симуляция ICMP</summary>
+  <br>
 
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/7b3240cf-5f8e-46f8-8128-60c975da8114" />
+  > На следующих скриншотах показан путь ICMP эхо-запроса и ответа.
 
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/1b85bfa8-6757-4de2-a7eb-b106d73a044e" />
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/0e19432c-1fc1-4d22-8fb9-4102566201cd" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/bd1e4ecd-b41b-468c-965f-3f71ce8aff87" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/21792b5f-9c94-458a-9cba-b09532617aab" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/62534d26-0172-4d6b-b08f-7358356714e2" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/2c701bdb-8595-4dfe-ad01-72b7543fd628" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/7beec011-26b0-4b72-9961-43e87324c645" />
+  
+  <img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/c9682058-e077-4a40-ba9f-5d567d89170d" />
+  
+  > Таких пакетов ещё 3 (демонстрация только одного).
+</details>
 
-> На следующих скриншотах показан путь ICMP эхо-запроса и ответа.
-
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/0e19432c-1fc1-4d22-8fb9-4102566201cd" />
-
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/bd1e4ecd-b41b-468c-965f-3f71ce8aff87" />
-
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/21792b5f-9c94-458a-9cba-b09532617aab" />
-
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/62534d26-0172-4d6b-b08f-7358356714e2" />
-
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/2c701bdb-8595-4dfe-ad01-72b7543fd628" />
-
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/7beec011-26b0-4b72-9961-43e87324c645" />
-
-<img width="1292" height="664" alt="image" src="https://github.com/user-attachments/assets/c9682058-e077-4a40-ba9f-5d567d89170d" />
-
-> Таких эхо-запросов и ответов будет ещё 3.
-
-> Обратите внимание на ARP таблицу до команды ping и после.
+<details>
+  <summary>Command Prompt</summary>
+  <br>
 
  <img width="639" height="772" alt="image" src="https://github.com/user-attachments/assets/355f1d7e-1e3e-4b4e-98a8-0a92d1cfd679" />
-
-На этом симуляцию можно завершить.
+</details>
