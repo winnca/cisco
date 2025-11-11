@@ -15,54 +15,88 @@
 
 ### Реализация
 
-1. Создайте схему сети.
+1. Создайте сеть.
 
-<img width="484" height="419" alt="image" src="https://github.com/user-attachments/assets/48b37bea-426d-4d0f-8a9c-f29c0eb36521" />
+<details>
+  <summary>Схема</summary>
+  <br>
+
+  <img width="484" height="419" alt="image" src="https://github.com/user-attachments/assets/48b37bea-426d-4d0f-8a9c-f29c0eb36521" />
+</details>
 
 2. ПК со шлюзами для маршрутизатора.
 
-<img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/fbd6a10d-de17-44b7-9860-f61d6472cdb9" />
+<details>
+  <summary>1</summary>
+  <br>
 
-<img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/0cb8682a-1583-490f-8bf4-db1879752642" />
+  <img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/fbd6a10d-de17-44b7-9860-f61d6472cdb9" />
+</details>
 
-<img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/4c64595b-62cb-46af-a4d4-dc574966eadc" />
+<details>
+  <summary>2</summary>
+  <br>
 
-<img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/00d342ea-be43-45b6-a609-4d7326f602af" />
+  <img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/0cb8682a-1583-490f-8bf4-db1879752642" />
+</details>
+
+<details>
+  <summary>3</summary>
+  <br>
+
+  <img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/4c64595b-62cb-46af-a4d4-dc574966eadc" />
+</details>
+
+<details>
+  <summary>4</summary>
+  <br>
+
+  <img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/00d342ea-be43-45b6-a609-4d7326f602af" />
+</details>
 
 3. Настроим порт 4 на обоих коммутаторах.
 
-Коммутатор 1:
+<details>
+  <summary>CLI</summary>
+  <br>
+
+  Коммутатор 1:
    * enable
    * conf t
    * int fa0/4
    * switchport access vlan 20
    * exit 2 раза
    * sh vl br
-> Порт 4 добавится к vlan 20 при команде sh vl br
-
-Коммутатор 2:
-   * enable
-   * conf t
-   * int fa0/4
-   * switchport access vlan 30
-   * exit 2 раза
-   * sh vl br
-> Порт 4 добавится к vlan 30 при команде sh vl br
+  > Порт 4 добавится к vlan 20 при команде sh vl br
+  
+  Коммутатор 2:
+     * enable
+     * conf t
+     * int fa0/4
+     * switchport access vlan 30
+     * exit 2 раза
+     * sh vl br
+  > Порт 4 добавится к vlan 30 при команде sh vl br
+</details>
 
 4. Маршрутизатор.
 
-<img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/f273f2f8-f11c-4f2e-b2eb-f8d84c7b09ba" />
+<details>
+  <summary>Сетевые интерфейсы</summary>
+  <br>
 
-<img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/91ff1570-64dd-47a0-941d-026dfc682eed" />
+  <img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/f273f2f8-f11c-4f2e-b2eb-f8d84c7b09ba" />
 
-7. Проверим работоспобность сети. Каждый пк должен быть доступен в сети.
+  <img width="639" height="569" alt="image" src="https://github.com/user-attachments/assets/91ff1570-64dd-47a0-941d-026dfc682eed" />
+</details>
 
-<img width="639" height="770" alt="image" src="https://github.com/user-attachments/assets/5491fded-7979-4048-ac77-3c2617b1f12f" />
+7. Работоспобность сети. Каждый пк должен быть доступен в сети.
 
+<details>
+  <summary>Проверка</summary>
+  <br>
 
-
-
-
-
+  <img width="639" height="770" alt="image" src="https://github.com/user-attachments/assets/5491fded-7979-4048-ac77-3c2617b1f12f" />
+</details>
 
 
