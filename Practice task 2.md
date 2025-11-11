@@ -141,7 +141,7 @@
 5. Теперь выдадим IP-configuration.
 
 <details>
-  <summary>Кофигурируем</summary>
+  <summary>Конфигурируем</summary>
   <br>
 
    Зайдите в Commant promt -> введите ipconfig /release (сброс параметров) -> введите ipconfig/renew.
