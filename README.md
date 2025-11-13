@@ -126,7 +126,6 @@
   <details>
     <summary>Firewall программный</summary>
     <br>
-    * на сервере.
     <img width="541" height="242" alt="image" src="https://github.com/user-attachments/assets/8448b9c4-f9b4-4272-95f8-a3b44b07ea1d" />
   </details>
 
